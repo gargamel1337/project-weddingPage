@@ -1,0 +1,38 @@
+.container{
+  width: 100%;
+  background-color: $color-bisque;
+  height: auto;
+
+  .aboutme{
+    background-color: $color-antique-light;
+  }
+  .container_nav{
+    font-size: 1.3em;
+    font-family: cursive;
+    text-align: center;
+    padding: 30px 200px;
+
+    .name{
+      margin-top: 15px;
+    }
+  }
+  .container_info{
+    display: flex;
+    padding: 30px 200px;
+    justify-content: space-around;
+    font-family: $font-main;
+    line-height: 1.3em;
+    text-align: justify;
+
+    .aboutme{
+      text-align: end;
+    }
+  }
+
+  @media only screen and (max-width: 1200px){
+    .container_info{
+      display: block;
+    }
+  }
+}
+

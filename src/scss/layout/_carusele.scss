@@ -1,0 +1,64 @@
+.w3-content{
+  width: 100%;
+  height: 820px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.mySlides {
+  min-width: 100%;
+  min-height: 820px;
+  transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+}
+
+%btn-styles {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  height: 820px;
+  width: 10%;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+
+  &:hover{
+    background: rgba(0,0,0,0.356);
+    cursor: pointer;
+    i{
+      color: $color-width;
+    }
+  }
+}
+
+.btn-left {
+  left: 0;
+  @extend %btn-styles;
+}
+
+.btn-right {
+  right: 0;
+  @extend %btn-styles;
+}
+i{
+  font-size: 3rem;
+}
+
+//.container_logo_slider{
+//  color: black;;
+//  position: absolute;
+//  z-index: 1;
+//  font-size: 3em;
+//  font-family: cursive;
+//  margin-left: 40%;
+//  line-height: 1.3em;
+//
+//
+//}
+
