@@ -1,0 +1,73 @@
+.container_nav_coll{
+  @extend %main_header_style;
+
+  .name{
+    margin-top: 15px;
+  }
+}
+
+// Main section
+.main_container_collaboration{
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.main_collaboration{
+  background:none;
+}
+
+.name_collaboration{
+  font-family: $font-main;
+  line-height: 1.3em;
+  padding: 25px 0;
+}
+
+.nav_collaboration{
+  line-height: 1.3em;
+  padding: 10px 0;
+  font-size: 1.2em;
+  border-bottom: 1px solid black;
+}
+
+.paragraf_collaboration{
+  margin: 30px 0;
+}
+
+.container_nav{
+  padding: 30px 50px;
+  color: $color-width;
+  background: rgba(0,0,0,0.356);
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-size: 1.3em;
+  font-family: cursive;
+  text-align: center;
+
+}
+.container_info_collaboration{
+  align-items: center;
+  width: 100%;
+}
+.container_collaboration{
+  width: 60%;
+  padding: 30px 100px;
+  font-family: $font-main;
+  line-height: 1.3em;
+  text-align: justify;
+  border-radius: 20px;
+  margin: 40px auto;
+  background: $color-bisque;
+}
+.icone_collaboration{
+  display: flex;
+
+  i{
+    margin-right: 15px;
+  }
+}

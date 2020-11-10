@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 const Form = () => {
 
@@ -55,6 +56,7 @@ const Form = () => {
                             <option>...</option>
                         </select>
                     </div>
+
                     <div className="calendar">
                          <label htmlFor="validationCustom04">Data wesela:</label>
                           <Calendar onChange={onChange}

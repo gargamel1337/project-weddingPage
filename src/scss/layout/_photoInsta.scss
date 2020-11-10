@@ -1,0 +1,14 @@
+
+
+// instagram
+
+.container_nav_instagram{
+    @extend %main_header_style;
+    background-color:$color-mignonette;
+    .name{
+      margin-top: 15px;
+    }
+  }
+
+
+

@@ -1,4 +1,5 @@
 import './App.scss';
+import ReactDOM from 'react-dom';
 import {HashRouter, Route, Link, Switch, NavLink,} from 'react-router-dom'
 import Header from "./js/Header";
 import Carusele from "./js/Carusele";
@@ -10,40 +11,49 @@ import Footer from "./js/Footer";
 import Picters from "./js/Picters";
 import Form from "./js/Form";
 import References from "./js/References";
+import AboutMeSections from "./js/AboutMeSections";
+import OfertsSection from "./js/OfertsSection";
+import CollaborrationSection from "./js/CollaborrationSection";
 
 function App() {
   return (
-      <div className="App">
+      <HashRouter>
+          <div className="App">
+              <header><Header/></header>
+              <Switch>
+                  <Route exact path="/">
+                      <>
+                          <Header/>
+                          <Carusele/>
+                          <AboutMe/>
+                          <Statistick/>
+                          <Oferts/>
+                          <Collaboration/>
+                          <Picters/>
+                          <References/>
+                      </>
+                  </Route>
 
-          <Header/>
-          <Carusele/>
-          <AboutMe/>
-          <Statistick/>
-          <Oferts/>
-          <Collaboration/>
-          <Picters/>
-          <References/>
-          <Footer/>
+                  <Route path="/o mnie">
+                      <AboutMeSections/>
+                  </Route>
+                  <Route path="/oferta">
+                      <OfertsSection/>
+                  </Route>
+                  <Route path="/zasady wspolpracy">
+                      <CollaborrationSection/>
+                  </Route>
+                  <Route path="/kontakt">
+                      <Form/>
+                  </Route>
 
-      </div>
+              </Switch>
+
+              <footer><Footer/></footer>
+          </div>
+      </HashRouter>
   );
 }
 
 export default App;
-// <Switch>
-//   <Route path="/">
-//     <Header />
-//   </Route>
-//   <Route path="/o mnie">
-//     <AboutMe/>
-//   </Route>
-//   <Route path="/oferta">
-//     <Oferts/>
-//   </Route>
-//   <Route path="/kontakt">
-//     <Form/>
-//   </Route>
-//   <Route path="/">
-//     <Header />
-//   </Route>
-// </Switch>
+

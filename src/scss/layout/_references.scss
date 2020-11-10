@@ -1,3 +1,10 @@
+.container_nav_references{
+  @extend %main_header_style;
+  .name{
+    margin-top: 15px;
+  }
+}
+
 .opinion{
   text-align: center;
   margin: 10px;

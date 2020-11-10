@@ -97,7 +97,7 @@ const References = () => {
 
     return (
         <div className="container references">
-            <div className="container_nav">
+            <div className="container_nav_references">
                 <h1 className="text">OPINIE</h1>
                 <h1 className="name">Wasze zaufanie jest dla mnie najpiękniejszą nagrodą</h1>
             </div>

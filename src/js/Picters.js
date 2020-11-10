@@ -53,7 +53,7 @@ import zdjecie3 from "../images/images.jpg";
 const Picters = () => {
     return (
         <div className="container instagram ">
-            <div className="container_nav ">
+            <div className="container_nav_instagram ">
                 <h1 className="text">INSTAGRAM</h1>
                 <h1 className="name">@marlenakomonska</h1>
             </div>

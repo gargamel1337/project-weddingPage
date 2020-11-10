@@ -1,11 +1,12 @@
 import React from 'react';
 import picter from "../images/images.jpg"
 import foto from "../images/para.jpg";
+import {NavLink} from "react-router-dom";
 
 const Collaboration = () => {
     return (
         <div className="container collaboration">
-            <div className="container_nav">
+            <div className="container_nav_coll">
                 <h1 className="text">ZASADY WSPÓŁPRACY</h1>
                 <h1 className="name">POZNAJ PROCES DZIALANIA</h1>
             </div>
@@ -21,7 +22,9 @@ const Collaboration = () => {
                     psa labore nemo, consectetur adipisicing elit. Amet, blanditiis corporis cumque dolor dolores
                     eligendi
                     odit pariatur possimus ratione, reiciendis saepe sint vitae<br/>
-                    <button className="btn btn-lg btn-primary btn-collaboration">Czytaj wiecej</button>
+                    <button className="btn btn-lg btn-primary btn-collaboration">
+                        <NavLink to="/zasady wspolpracy">Czytaj wiecej</NavLink>
+                    </button>
                 </p>
                 <img className="main-image img-collaboration" src={picter}/>
             </div>
