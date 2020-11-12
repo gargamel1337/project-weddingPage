@@ -1,21 +1,31 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import { NavLink } from "react-router-dom";
-
+import { useLocation, Switch } from 'react-router-dom'
 
 
 const Header = () => {
 
-    const [header, setHeader] = useState(false);
-
+    function HeaderView() {
+        const location = useLocation();
+        const style = {
+            position: "absolute",
+            background: "none",
+            color: "width"
+        }
+        if (location === '/') {
+            return <span className="container_menu"  style={style}></span>
+        }
+    }
+    HeaderView();
 
     const activeStyle = {
         color: "#cb997e",
     }
 
     return (
-        <header>
+        <header >
             <div className="container">
-                <div className="container_menu">
+                <div className="container_menu" >
                     <div className="container_logo">
                         <h1 className="logo">
                             <NavLink to="/" activeClassName="logo-link">Wedding Planner</NavLink>
@@ -24,13 +34,13 @@ const Header = () => {
                     </div>
                     <ul className="menu">
                         <li className="menu-li">
-                            <NavLink to="/o mnie" activeClassName="menu_inner" activeStyle={activeStyle}>O mnie</NavLink>
+                            <NavLink to="/omnie" activeClassName="menu_inner main_said" activeStyle={activeStyle}>O mnie</NavLink>
                         </li>
                         <li className="menu-li">
                             <NavLink to="/oferta" activeClassName="menu_inner" activeStyle={activeStyle}>Oferta</NavLink>
                         </li>
                         <li className="menu-li">
-                            <NavLink to="/zasady wspolpracy" activeClassName="menu_inner" activeStyle={activeStyle}>Zasady współpracy</NavLink>
+                            <NavLink to="/zasadywspolpracy" activeClassName="menu_inner" activeStyle={activeStyle}>Zasady współpracy</NavLink>
                         </li>
                         <li className="menu-li">
                             <NavLink to="/kontakt" activeClassName="menu_inner" activeStyle={activeStyle}>Kontakt</NavLink>

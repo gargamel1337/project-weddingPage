@@ -1,5 +1,5 @@
 import React from 'react';
-import foto from "../images/images2.jpg";
+import foto from "../images/kwiat.jpg";
 
 const Statistick = () => {
     return (

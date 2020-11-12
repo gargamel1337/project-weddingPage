@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import zdjecie1 from "../images/To_1.jpg";
 import zdjecie2 from "../images/slub-i-wesele.jpg";
-import zdjecie3 from "../images/images.jpg";
+
 
 
 

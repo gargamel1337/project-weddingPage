@@ -1,8 +1,7 @@
 import React, {useState,useEffect} from 'react';
-import para from "../images/para.jpg";
-import zdjecie1 from "../images/To_1.jpg";
-import zdjecie2 from "../images/slub-i-wesele.jpg";
-import zdjecie3 from "../images/images.jpg";
+import zdjecie1 from "../images/slider2.jpg";
+import zdjecie2 from "../images/slider1.jpg";
+import zdjecie3 from "../images/slider3.jpg";
 import picter from "../images/profilwe.jpg";
 
 function ImgComp ({src}) {
@@ -15,7 +14,7 @@ function ImgComp ({src}) {
 
 
 const Carusele = () => {
-    const pictures = [<ImgComp src={para}/> , <ImgComp src={zdjecie1}/>, <ImgComp src={zdjecie2}/>, <ImgComp src={zdjecie3}/>]
+    const pictures = [ <ImgComp src={zdjecie1}/>, <ImgComp src={zdjecie2}/>, <ImgComp src={zdjecie3}/>]
     const [x, setX] = useState(0);
 
     const goLeft = () =>{

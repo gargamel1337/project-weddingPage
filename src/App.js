@@ -14,16 +14,17 @@ import References from "./js/References";
 import AboutMeSections from "./js/AboutMeSections";
 import OfertsSection from "./js/OfertsSection";
 import CollaborrationSection from "./js/CollaborrationSection";
+import ScrollToTop from "./js/ScrollToTop";
 
 function App() {
   return (
       <HashRouter>
+          <ScrollToTop/>
           <div className="App">
               <header><Header/></header>
               <Switch>
                   <Route exact path="/">
                       <>
-                          <Header/>
                           <Carusele/>
                           <AboutMe/>
                           <Statistick/>
@@ -34,13 +35,13 @@ function App() {
                       </>
                   </Route>
 
-                  <Route path="/o mnie">
+                  <Route path="/omnie">
                       <AboutMeSections/>
                   </Route>
                   <Route path="/oferta">
                       <OfertsSection/>
                   </Route>
-                  <Route path="/zasady wspolpracy">
+                  <Route path="/zasadywspolpracy">
                       <CollaborrationSection/>
                   </Route>
                   <Route path="/kontakt">

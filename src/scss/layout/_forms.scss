@@ -1,32 +1,92 @@
-.container_info_form{
-  padding: 30px 200px;
+.first_container_form{
+  @extend %main_header_style;
+  padding: 50px 0;
+  color: $color-width;
+  background: rgba(0,0,0,0.4);
+ // margin-top: 100px;
+  //margin-bottom: 100px;
+  margin: 0 auto;
+}
+
+.container_form{
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+form{
+  opacity: 0.8;
+ // margin: 0 auto;
+
+  .btn_form{
+    padding: 10px 60px;
+  }
+ }
+
+.col{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.col1{
+  padding: 20px;
+  width: 30%;
+}
+.col2{
+  padding: 20px;
+  width: 30%;
+}
+
+.form-name{
+  margin-bottom: 20px;
+}
+
+label{
+  text-align: left;
+  margin-bottom: 5px;
   font-family: $font-main;
-  line-height: 1.3em;
-  text-align: justify;
 }
 input{
-  height: 30px;
-}
-.form-name{
-  font-size: 1.3em;
-  font-family: cursive;
-  text-align: center;
-}
-.calendar {
-  width: 600px;
-  height: auto;
-  padding: 20px;
+  border: none;
+  font-family: $font-main;
+  color: #222222;
+  padding-top: 5px;
 }
 
 .row{
- display: grid;
-  padding: 20px;
+  display: grid;
+  padding: 7px;
 }
 .form-check-label{
   margin-left: 20px;
 }
 
-.btn-form{
-  display:flex;
-  justify-content: center;
+// stylowanie kalendarza
+div.react-calendar{
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  button{
+    padding: 0;
+    margin: 0;
+    height: auto;
+    font-size: 22px;
+  }
+  div{
+    margin: 0;
+  }
 }
+.react-calendar__month-view__weekdays {
+  color: indianred;
+}
+
+

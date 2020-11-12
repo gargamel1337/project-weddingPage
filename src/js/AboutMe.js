@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import profilowe from "../images/profilwe.jpg";
-import foto from "../images/images.jpg";
+import profilowe from "../images/profilowe-min.jpg";
+import foto from "../images/zdjecie2.jpg";
 
 const AboutMe = () => {
     return (
@@ -21,7 +21,7 @@ const AboutMe = () => {
                     odit pariatur possimus ratione, reiciendis saepe sint vitae
                     <br/>
                     <button className="btn btn-lg btn-primary aboutme">
-                        <NavLink to="/o mnie">Czytaj wiecej</NavLink>
+                        <NavLink to="/omnie">Czytaj wiecej</NavLink>
                     </button>
                 </p>
             </div>

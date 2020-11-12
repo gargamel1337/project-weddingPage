@@ -1,6 +1,6 @@
 import React from 'react';
-import picter from "../images/images.jpg"
-import foto from "../images/para.jpg";
+import picter from "../images/zdjecie1.jpg"
+import foto from "../images/kwiat.jpg";
 import {NavLink} from "react-router-dom";
 
 const Collaboration = () => {
@@ -23,7 +23,7 @@ const Collaboration = () => {
                     eligendi
                     odit pariatur possimus ratione, reiciendis saepe sint vitae<br/>
                     <button className="btn btn-lg btn-primary btn-collaboration">
-                        <NavLink to="/zasady wspolpracy">Czytaj wiecej</NavLink>
+                        <NavLink to="/zasadywspolpracy">Czytaj wiecej</NavLink>
                     </button>
                 </p>
                 <img className="main-image img-collaboration" src={picter}/>
