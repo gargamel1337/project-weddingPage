@@ -4,6 +4,7 @@ import 'react-calendar/dist/Calendar.css';
 import foto from "../images/kwiat.jpg";
 //import validator from 'validator';
 //import PropTypes from "prop-types";
+//import { db } from "../src/firebase.js";
 
 
 const Form = () => {
@@ -57,6 +58,18 @@ const Form = () => {
         }
     }
 
+    // useEffect(() => {
+    //     db.collection("form").add({
+    //         name: "Tokyo",
+    //         country: "Japan"
+    //     })
+    //         .then(function (docRef) {
+    //             console.log("Document written with ID: ", docRef.id);
+    //         })
+    //         .catch(function (error) {
+    //             console.error("Error adding document: ", error);
+    //         });
+    // }, [])
 
 
     // function renderAllRecipes() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import foto from "../images/slub-i-wesele.jpg";
+import foto from "../images/zdjecie1-min.jpeg";
 
 const OfertsSection = () => {
     return (

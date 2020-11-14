@@ -22,24 +22,44 @@ const MainPanel = () => {
             });
     }, []);
 
-    if (!form) {return <h1>Brak podesłanych formularzy</h1>}
+    if (!form) {return <h1>Laduje dane.....</h1>}
 
 
     return (
         <div className="App">
-            <header className="App-header">
-                <table>
-                    <tbody>
-                    {form.map((column) => (
-                        <tr>
-                            <td>{column.username}</td><br/>
-                            <td>{column.city}</td><br/>
-                            <td>{column.city.email}</td><br/>
+            <main class="app-mainSpace">
+                <div class="allFormContainer">
+                    <div class="FormContainer">
+                        <p>Lista nadesłanych formularzy</p>
+                        <div class="line"></div>
+                    </div>
+                    <table class="table_form">
+                        <tr class="list-form">
+                            <th>Imie</th>
+                            <th>adres email</th>
+                            <th>Numer telefonu</th>
+                            <th>Miejsce wesela</th>
+                            <th>Liczba gości</th>
+                            <th>Data</th>
+                            <th>Zakres współpracy</th>
+                            <th>Dodatkowe informacje</th>
                         </tr>
-                    ))}
-                    </tbody>
-                </table>
-            </header>
+                        {form.map((column) => (
+                            <tr class="next_list_form">
+                                <td>{column.username}</td>
+                                <td>{column.email}</td>
+                                <td>{column.phone}</td>
+                                <td>{column.city}</td>
+                                <td>{column.range}</td>
+                                <td>{column.data}</td>
+                                <td>{column.select}</td>
+                                <td>{column.text}</td>
+                            </tr>
+
+                        ))}
+                    </table>
+                </div>
+            </main>
         </div>
     );
 }

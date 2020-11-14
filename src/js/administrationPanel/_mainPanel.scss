@@ -1,0 +1,34 @@
+.allFormContainer{
+  padding: 30px 200px;
+  font-family: $font-main;
+  line-height: 1.3em;
+}
+.FormContainer{
+  p{
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.2em;
+  }
+}
+.table_form{
+  width: 90%;
+  height: auto;
+  text-align: left;
+}
+table{
+  width: 800px;
+  height: auto;
+  margin: 20px auto;
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background: gray;
+  margin:7px;
+}
+.list-form{
+  border-bottom: 2px solid gray;
+}
+.next_list_form {
+
+}

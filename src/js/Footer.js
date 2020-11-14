@@ -12,13 +12,14 @@ const Footer = () => {
                         <p className="contact-text"> +48 608 307 050</p>
                     </div>
                     <div className="contact-two">
-                        <i className="fas fa-envelope-open-text"></i>
+                        <a href="#"><i className="fas fa-envelope-open-text"/></a>
                         <h2 className="contact-header">Napisz</h2>
-                        <p className="contact-text"> marlena.komonska@wp.pl</p>
+                        <a href="#"><p className="contact-text">marlena.komonska@wp.pl</p></a>
                     </div>
+
                     <div className="contact-three">
-                        <i className="fab fa-facebook-square"></i>
-                        <i className="fab fa-instagram"></i>
+                        <a href="https://www.facebook.com/marlena.komonska"><i className="fab fa-facebook-square"/></a>
+                        <a href="https://www.facebook.com/marlena.komonska"><i className="fab fa-instagram"/></a>
                     </div>
                 </div>
                 <div className="contact-footer">

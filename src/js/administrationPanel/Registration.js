@@ -63,10 +63,6 @@ const Registration = () => {
                            onChange={(e) => setPassword(e.target.value)}/>
                 </div>
 
-                <div className="form-group form-check registration">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-                </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
 

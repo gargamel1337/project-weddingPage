@@ -1,8 +1,8 @@
 import React, {useState,useEffect} from 'react';
-import zdjecie1 from "../images/slider2.jpg";
-import zdjecie2 from "../images/slider1.jpg";
-import zdjecie3 from "../images/slider3.jpg";
-import picter from "../images/profilwe.jpg";
+import zdjecie1 from "../images/slider1-min.jpeg";
+import zdjecie2 from "../images/slider2-min.jpeg";
+import zdjecie3 from "../images/zdjecie7-min.jpeg";
+
 
 function ImgComp ({src}) {
  const imgStyle = {

@@ -1,6 +1,6 @@
 import React from 'react';
-import picter from "../images/slub-i-wesele.jpg"
-import foto from "../images/zdjecie1.jpg";
+import picter from "../images/zdjecie5-min.jpeg"
+import foto from "../images/zdjecie5-min.jpeg";
 import {NavLink} from "react-router-dom";
 
 const Oferts = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import picter from "../images/zdjecie1.jpg"
-import foto from "../images/kwiat.jpg";
+import picter from "../images/zdjecie6-min.jpeg"
+import foto from "../images/zdjecie3-min.jpeg";
 import {NavLink} from "react-router-dom";
 
 const Collaboration = () => {
