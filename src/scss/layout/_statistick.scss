@@ -1,27 +1,24 @@
-.section-text{
-  text-align: center;
-  font-size: 1.3em;
-  font-family: cursive;
-  margin-top: 100px;
-  margin-bottom: 101px;
+.section{
+  background-color: $color-bisque;
+  padding-top: 50px;
 }
+
 .section-block{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 .block{
   flex-direction: column;
   width: 176px;
   margin: 0 92px;
 }
-.empty-person{
+.empty-calendar{
   width: 70px;
   height: 70px;
   border-radius: 50%;
   background: $color-antique-light;
-  margin-bottom: 15px;
   position: relative;
 }
 .empty-eye{
@@ -48,7 +45,6 @@
 .fa-calendar-check{
   position:absolute;
   font-size: 2.5em;
-  margin-bottom: 10px;
 }
 .fa-glass-cheers{
   position:absolute;
@@ -64,6 +60,7 @@
   color: black;
   font-family: $font-main;
   line-height: 1.3em;
+  margin-top: 10px;
 }
 .block-text{
   font-family: $font-main;

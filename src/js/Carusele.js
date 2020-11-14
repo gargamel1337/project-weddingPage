@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import zdjecie1 from "../images/slider1-min.jpeg";
 import zdjecie2 from "../images/slider2-min.jpeg";
-import zdjecie3 from "../images/zdjecie7-min.jpeg";
+import zdjecie3 from "../images/zdjecie9-min.jpeg";
 
 
 function ImgComp ({src}) {
@@ -33,7 +33,10 @@ const Carusele = () => {
                     </div>
                 )
             })}
-
+            <div className="text_slider container_nav">
+                <h1 className="logo_slider">Marlena Komońska</h1>
+                <h1 className="logo_slider">Wedding Planner</h1>
+            </div>
             <button className="btn-left" onClick={goLeft}>
                 <i className="fas fa-angle-double-left"></i>
             </button>
@@ -46,38 +49,3 @@ const Carusele = () => {
 
 export default Carusele;
 
-
-// return (
-//     <div className="container references">
-//         <div className="container_nav">
-//             <h1 className="text">OPINIE</h1>
-//             <h1 className="name">Wasze zaufanie jest dla mnie najpiękniejszą nagrodą</h1>
-//         </div>
-//         <div className="container_reference">
-//                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, blanditiis corporis cumque dolor
-//                 dolores eligendi
-//                 eum expedita harum illo ipsa labore nemo, consectetur adipisicing elit. Amet, blanditiis corporis
-//                 cumque dolor dolores eligendi
-//                 odit pariatur possimus ratione, reiciendis saepe sint vitae,
-//                     psa labore nemo, consectetur adipisicing elit. Amet, blanditiis corporis cumque dolor dolores
-//                 eligendi
-//                 odit pariatur possimus ratione, reiciendis saepe sint vitae
-//                 psa labore nemo, consectetur adipisicing elit. Amet, blanditiis corporis cumque dolor dolores
-//                 eligendi
-//                 odit pariatur possimus ratione, reiciendis saepe sint vitae
-//                 </p>
-//                 <div className="opinion">
-//                     <img className="image_opinion" src={picter}/>
-//                     <p className="text_opinion">Marlena & Paweł</p>
-//                 </div>
-//                 <button className="btn-left" onClick={goLeft}>
-//                     <i className="fas fa-angle-double-left"></i>
-//                 </button>
-//                 <button className="btn-right"onClick={goRight}>
-//                     <i className="fas fa-angle-double-right"></i>
-//                 </button>
-//             </div>
-//             <section className="image" style={{backgroundImage: `url(${foto})`}}></section>
-//             </div>
-//             );
-//             };

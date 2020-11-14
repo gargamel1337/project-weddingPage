@@ -1,16 +1,23 @@
+.container_aboutme_text{
+  text-align: center;
+  p{
+    text-align: justify;
+  }
+}
+
 .container{
   width: 100%;
   background-color: $color-bisque;
   height: auto;
-
-  .aboutme{
-    background-color: $color-antique-light;
   }
+
   .container_nav_about{
     @extend %main_header_style;
 
     .name{
-      margin-top: 15px;
+      margin-top: 7px;
+      border-bottom: 1px solid #222222;
+      padding-bottom: 5px;
     }
   }
   .container_info{
@@ -21,17 +28,15 @@
     line-height: 1.3em;
     text-align: justify;
 
-    .aboutme{
-      text-align: end;
-    }
   }
+
 
   @media only screen and (max-width: 1200px){
     .container_info{
       display: block;
     }
   }
-}
+
 
 // Big section
 
@@ -53,6 +58,7 @@
 .paragraf_aboutme{
   margin: 30px 0;
 }
+
 %block-style{
   width: 50%;
   padding: 30px 100px;
@@ -69,7 +75,7 @@
 }
 .container_description_aboutme{
   @extend %block-style;
-  margin: 150px 0 50px 90px;
+  margin: 150px 0 50px 20px;
 }
 
 .icone_aboutme{

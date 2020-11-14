@@ -1,6 +1,6 @@
 .w3-content{
   width: 100%;
-  height: 820px;
+  height: 750px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -11,7 +11,7 @@
 
 .mySlides {
   min-width: 100%;
-  min-height: 820px;
+  min-height: 750px;
   transition: 0.5s;
   overflow: hidden;
   position: relative;
@@ -19,17 +19,17 @@
 
 %btn-styles {
   position: absolute;
-  top: 50%;
+  top: 54%;
   transform: translateY(-50%);
   background: none;
-  height: 820px;
-  width: 10%;
+  width: 6%;
   transition: 0.5s;
   border: none;
   outline: none;
+  margin: auto;
 
   &:hover{
-    background: rgba(0,0,0,0.356);
+    //background: rgba(0,0,0,0.356);
     cursor: pointer;
     i{
       color: $color-width;
@@ -50,15 +50,21 @@ i{
   font-size: 3rem;
 }
 
-//.container_logo_slider{
-//  color: black;;
-//  position: absolute;
-//  z-index: 1;
-//  font-size: 3em;
-//  font-family: cursive;
-//  margin-left: 40%;
-//  line-height: 1.3em;
-//
-//
-//}
+.text_slider{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+
+  .logo_slider{
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-family: $font-main;
+    line-height: 0.8em;
+  }
+}
+
+
 

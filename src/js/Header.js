@@ -22,19 +22,21 @@ const Header = () => {
 
     const activeStyle = {
         color: "#cb997e",
+        border: "1px solid white",
+        borderRadius: "5px",
+        padding: "10px 15px",
     }
 
 
-
+// <h2 className="logo">Marlena Komońska</h2>
     return (
         <header >
-            <div className="container">
+            <div className="container main_menu">
                 <div className="container_menu" >
                     <div className="container_logo">
                         <h1 className="logo">
-                            <NavLink to="/" activeClassName="logo-link">Wedding Planner</NavLink>
+                            <NavLink to="/" activeClassName="logo-link"><i className="fab fa-aviato"></i></NavLink>
                         </h1>
-                        <h2 className="logo">Marlena Komońska</h2>
                     </div>
                     <ul className="menu">
                         <li className="menu-li">

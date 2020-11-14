@@ -3,15 +3,12 @@ import foto from "../images/zdjecie10-min.jpeg";
 
 const Statistick = () => {
     return (
-        <div>
-            <div className="section">
-                <h2 className="section-text">Jakiś fajny tytuł</h2>
-            </div>
+        <div className="section">
             <div className="section-block">
                 <div className="block">
                     <div className="block-select">
                         <div className="section-img">
-                            <p className="empty-person"></p>
+                            <p className="empty-calendar"></p>
                             <i className="far fa-calendar-check"></i>
                         </div>
                         <h4 className="block-value">3</h4>

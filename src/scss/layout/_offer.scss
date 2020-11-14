@@ -1,15 +1,12 @@
 .container_nav_offert{
   @extend %main_header_style;
-  background-color: $color-bisque;
-  position: relative;
+  //position: relative;
 
   .name{
     margin-top: 15px;
   }
 }
-.btn-oferts{
-  background-color: $color-antique;
-}
+
 
 // Main section
 .main_container_offer{

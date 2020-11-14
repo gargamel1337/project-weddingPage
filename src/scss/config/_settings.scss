@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  font-family: $font-main sans-serif;
+  font-family: $font-main ;
   margin: 0;
 }
 body {
@@ -11,24 +11,31 @@ body {
 }
 
 .btn-primary{
+  background-color: $color-green;
   padding:10px 30px;
   border: none;
   font-family: $font-main;
   border-radius: 7px;
+  margin-top: 15px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .main-image{
   width: 320px;
-  height: 500px;
-  margin-right: 60px;
-  margin-bottom: 60px;
+  height: 400px;
+  margin: 20px 60px 20px 0;
 }
 
 %main_header_style{
   font-size: 1.3em;
-  font-family: cursive;
   text-align: center;
   padding: 30px 200px;
+  background-color: $color-bisque;
+  font-family: $font-main;
 }
 
 %image-style{
