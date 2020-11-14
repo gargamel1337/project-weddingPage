@@ -15,6 +15,7 @@ import AboutMeSections from "./js/AboutMeSections";
 import OfertsSection from "./js/OfertsSection";
 import CollaborrationSection from "./js/CollaborrationSection";
 import ScrollToTop from "./js/ScrollToTop";
+import Registration from "./js/administrationPanel/Registration";
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
                   </Route>
                   <Route path="/kontakt">
                       <Form/>
+                  </Route>
+                  <Route path="/registrationpanel">
+                      <Registration/>
                   </Route>
 
               </Switch>

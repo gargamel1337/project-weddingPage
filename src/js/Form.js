@@ -1,9 +1,9 @@
-import React, {useState,} from 'react';
+import React, {useState, useEffect} from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import foto from "../images/kwiat.jpg";
 //import validator from 'validator';
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 
 
 const Form = () => {
@@ -50,34 +50,43 @@ const Form = () => {
             return "new_form";
         } else if (lsForm) {
             return "returning_form";
-        } else {
+        // } else if (lsForm !== null) {
+        //     useEffect( renderAllRecipes()} [form] )
+        }else {
             return "error";
         }
     }
 
 
-    function renderAllRecipes() {
-        const lsForm = JSON.parse(localStorage.getItem("lsForm"));
-        if (lsForm !== null) {
-            document.getElementById('validationServer01').value = lsForm.name;
-            document.getElementById('validationServer02').value = lsForm.email;
-            document.getElementById('validationServer03').value = lsForm.phone;
-            document.getElementById('validationServer04').value = lsForm.city;
-            document.getElementById('validationServer05').value = lsForm.range;
-            // document.getElementById('validationServer06').value = lsForm.data;
-            document.getElementById('validationServer07').value = lsForm.text;
-        }
-        return true;
-    }
 
-    window.onload = function () {
-        const lsForm = JSON.parse(localStorage.getItem("lsForm"));
-        if (lsForm !== null) renderAllRecipes();
-    }
+    // function renderAllRecipes() {
+    //     const lsForm = JSON.parse(localStorage.getItem("lsForm"));
+    //     if (lsForm !== null) {
+    //         setUsername(lsForm.name);
+    //         setEmil(lsForm.email);
+    //         setPhone(lsForm.phone);
+    //         setCity(lsForm.city);
+    //         setRange(lsForm.range);
+    //         setTextarea(lsForm.text);
+    //         // document.getElementById('validationServer01').value = lsForm.name;
+    //         // document.getElementById('validationServer02').value = lsForm.email;
+    //         // document.getElementById('validationServer03').value = lsForm.phone;
+    //         // document.getElementById('validationServer04').value = lsForm.city;
+    //         // document.getElementById('validationServer05').value = lsForm.range;
+    //         // // document.getElementById('validationServer06').value = lsForm.data;
+    //         // document.getElementById('validationServer07').value = lsForm.text;
+    //     }
+    //     return true;
+    // }
+    //
+    // window.onload = function () {
+    //     const lsForm = JSON.parse(localStorage.getItem("lsForm"));
+    //     if (lsForm !== null) renderAllRecipes();
+    // }
 
     return (
         <div className="container_form" style={{backgroundImage: `url(${foto})`}}>
-            <div className="first_container_form" onKeyPress={saveFormToLocalStorage}>
+            <div className="first_container_form" >
                 <h1 className="form-name">SKONTAKTUJ SIĘ ZE MNĄ!</h1>
                 <form>
                     <div className="form-group" onSubmit={handleSubmit}>
@@ -88,7 +97,7 @@ const Form = () => {
                                     <label htmlFor="validationServer01">Imię</label>
                                     <input type="text" className="form-control" id="validationServer01"
                                            value={username} required
-                                           onChange={(e) => setUsername(e.target.value)}/>
+                                           onChange={(e) => { saveFormToLocalStorage(); setUsername(e.target.value)}}/>
                                 </div>
 
                                 <div className="row">
@@ -96,21 +105,21 @@ const Form = () => {
                                     <input type="email" className="form-control" id="validationServer02"
                                            placeholder="name@example.com"
                                            value={emil} required
-                                           onChange={(e) => setEmil(e.target.value)}/>
+                                           onChange={(e) =>{saveFormToLocalStorage(); setEmil(e.target.value)}}/>
                                 </div>
 
                                 <div className="row">
                                     <label htmlFor="validationServer03">Numer telefonu</label>
                                     <input type="text" className="form-control" id="validationServer03"
                                            value={phone} required
-                                           onChange={(e) => setPhone(e.target.value)}/>
+                                           onChange={(e) => {saveFormToLocalStorage(); setPhone(e.target.value)}}/>
                                 </div>
 
                                 <div className="row">
                                     <label htmlFor="validationServer04">Miejsce wesela</label>
                                     <input type="text" className="form-control" id="validationServer04"
                                            value={city}
-                                           onChange={(e) => setCity(e.target.value)}/>
+                                           onChange={(e) => {saveFormToLocalStorage(); setCity(e.target.value)}}/>
                                 </div>
 
                                 <div className="row">
@@ -130,7 +139,7 @@ const Form = () => {
                                            data-toggle="tooltip" data-placement="bottom" title={range}
                                            min="0" max="300"
                                            value={range}
-                                           onChange={(e) => setRange(e.target.value)}/>
+                                           onChange={(e) => {saveFormToLocalStorage(); setRange(e.target.value)}}/>
                                 </div>
                             </div>
                             <div className="col2">
@@ -145,7 +154,7 @@ const Form = () => {
                                     <label htmlFor="validationServer07">W czym jeszcze mogę Ci pomóc?</label>
                                     <textarea className="form-control" id="validationServer07"
                                               value={textarea}
-                                              onChange={(e) => setTextarea(e.target.value)}>
+                                              onChange={(e) => {saveFormToLocalStorage(); setTextarea(e.target.value)}}>
                                      </textarea>
                                 </div>
 
@@ -170,12 +179,12 @@ const Form = () => {
 }
 
 
-Form.propTypes={
-    username:PropTypes.string,
-    city: PropTypes.string,
-    phone: PropTypes.number,
-    text: PropTypes.string
-}
+// Form.propTypes={
+//     username:PropTypes.string,
+//     city: PropTypes.string,
+//     phone: PropTypes.number,
+//     text: PropTypes.string
+// }
 
 
 export default Form;

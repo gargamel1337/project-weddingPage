@@ -5,22 +5,26 @@ import { useLocation, Switch } from 'react-router-dom'
 
 const Header = () => {
 
-    function HeaderView() {
-        const location = useLocation();
-        const style = {
-            position: "absolute",
-            background: "none",
-            color: "width"
-        }
-        if (location === '/') {
-            return <span className="container_menu"  style={style}></span>
-        }
-    }
-    HeaderView();
+    // function HeaderView() {
+    //     const location = useLocation();
+    //     const style = {
+    //         position: "absolute",
+    //         background: "none",
+    //         color: "width"
+    //     }
+    //     if (location === '/administartionpanel') {
+    //         return(
+    //             <li className="menu-li">Zapytania</li>
+    //         )
+    //     }
+    // }
+    // HeaderView();
 
     const activeStyle = {
         color: "#cb997e",
     }
+
+
 
     return (
         <header >

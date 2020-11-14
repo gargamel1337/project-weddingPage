@@ -1,11 +1,25 @@
-.footer{
-  width: 100%;
-  background-color: $color-antique;
-  text-align: center;
-  margin: auto;
-  padding: 20px;
+.contact-footer {
   font-size: 1.3rem;
+
+  .footer {
+    width: 100%;
+    background-color: $color-antique;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+
+    .footer2 {
+      padding-bottom: 15px;
+      font-size: 1rem;
+
+      .registration-link{
+        text-decoration: none;
+        color: #222222;
+      }
+    }
+  }
 }
+
 .contact {
   background-color: $color-bisque;
   width: 100%;
@@ -14,27 +28,29 @@
   justify-content: space-around;
   padding: 30px 200px;
 
-  .contact-header{
+  .contact-header {
     font-size: 1.1em;
     font-family: cursive;
     text-align: center;
   }
 
-  .contact-text{
+  .contact-text {
     font-family: $font-main;
     line-height: 1em;
     margin-top: 15px;
   }
 }
-.contact-one{
-  i{
+
+.contact-one {
+  i {
     margin-left: 70px;
     font-size: 1em;
     margin-bottom: 15px;
+  }
 }
-}
-.contact-two{
-  i{
+
+.contact-two {
+  i {
     margin-left: 100px;
     font-size: 1em;
     margin-bottom: 15px;
