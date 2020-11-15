@@ -1,32 +1,30 @@
 import React from 'react';
 import { useEffect, useState } from "react";
 import { db } from "../../../src/firebase.js";
+import foto1 from "../../images/zdjecie4-min.jpeg";
 
 const MainPanel = () => {
 
 
-    const [form, setForm] = useState(false);
+    const [form, setForm] = useState([]);
 
     useEffect(() => {
         db.collection("form")
             .get()
-            .then(function (querySnapshot) {
+            .then((querySnapshot) => {
                 const tmp = [];
-                querySnapshot.forEach(function (doc) {
-                    tmp.push({
-                        ...doc.data(),
-                        id: doc.id,
-                    });
+                querySnapshot.forEach( (doc) => {
+                    const data = doc.data();
+                    tmp.push({ id: doc.id, ...data});
                 });
                 setForm(tmp);
             });
-    }, []);
+    }, [db]);
 
     if (!form) {return <h1>Laduje dane.....</h1>}
 
-
     return (
-        <div className="App">
+        <div className="main_section_aboutme" style={{backgroundImage: `url(${foto1})`}}>
             <main class="app-mainSpace">
                 <div class="allFormContainer">
                     <div class="FormContainer">
