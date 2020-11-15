@@ -66,6 +66,7 @@ const Form = () => {
             .catch((error) => {
                 console.error("Error adding document: ", error);
             });
+        delateFromToLocalStorage(); //to chyba powinno byc w formularzu pamietać by to przenieść
     }
     function saveFormToLocalStorage() {
         const form = {
@@ -100,7 +101,16 @@ const Form = () => {
             setSelect(lsForm.select);
         }
     }
-
+    function delateFromToLocalStorage(){
+        localStorage.clear("lsForm");
+        setUsername('');
+        setEmil('');
+        setRange('');
+        setSelect('');
+        setCity('');
+        setTextarea('');
+        setPhone('');
+}
 
     return (
         <div className="container_form" style={{backgroundImage: `url(${foto})`}}>
