@@ -47,6 +47,9 @@ const Form = () => {
 
     useEffect(() => {
         renderFormToLocalStorage();
+    }, [])
+
+    function saveFromFirebase(){
         db.collection("form").add({
             username: username,
             email: emil,
@@ -63,8 +66,7 @@ const Form = () => {
             .catch((error) => {
                 console.error("Error adding document: ", error);
             });
-    }, [])
-
+    }
     function saveFormToLocalStorage() {
         const form = {
             name: username,
@@ -210,7 +212,7 @@ const Form = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className="btn btn-primary btn_form" type="submit">Wyślij</button>
+                        <button className="btn btn-primary btn_form" type="submit" onClick={saveFromFirebase}>Wyślij</button>
                     </div>
                 </form>
             </div>
