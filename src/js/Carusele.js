@@ -1,13 +1,15 @@
 import React, {useState,useEffect} from 'react';
-import zdjecie1 from "../images/slider1-min.jpeg";
+import zdjecie1 from "../images/slider1.jpeg";
 import zdjecie2 from "../images/slider2-min.jpeg";
-import zdjecie3 from "../images/zdjecie9-min.jpeg";
+import zdjecie3 from "../images/zdjecie9.jpeg";
 
 
 function ImgComp ({src}) {
  const imgStyle = {
-     width:100+"%",
-     height: "auto"
+    maxWidth:"100%",
+     height: "auto",
+   // backgroundSize: "cover",
+   //  backgroundPosition: "center"
  }
  return <img src={src} alt="slide-img" style={imgStyle}></img>
 }

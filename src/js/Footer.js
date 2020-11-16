@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="contact-two">
                         <a href="#"><i className="fas fa-envelope-open-text"/></a>
                         <h2 className="contact-header">Napisz</h2>
-                        <a href="#"><p className="contact-text">marlena.komonska@wp.pl</p></a>
+                        <p className="contact-text">marlena.komonska@wp.pl</p>
                     </div>
 
                     <div className="contact-three">

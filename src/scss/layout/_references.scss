@@ -66,3 +66,24 @@
 i{
   font-size: 3rem;
 }
+
+@media only screen and (max-width: 1200px){
+  .container_nav_references{
+    padding: 10px 20px;
+  }
+  .opinion_slider{
+    padding: 10px 70px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .opinion_slider{
+    padding: 5px 22px;
+  }
+  .btn-left_opinion,
+  .btn-right_opinion{
+    width: auto;
+    i{
+      font-size: 20px;
+    }
+  }
+}

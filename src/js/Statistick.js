@@ -12,11 +12,11 @@ const Statistick = () => {
                             <i className="far fa-calendar-check"></i>
                         </div>
                         <h4 className="block-value">3</h4>
-                        <p className="block-text">sezony slubne na rynku</p>
+                        <p className="block-text">główne sezony slubne na rynku</p>
                     </div>
                 </div>
                 <div className="block">
-                    <div className="block-select">
+                    <div className="block-select block_eye">
                         <div className="section-img">
                             <p className="empty-eye"></p>
                             <i className="fas fa-glass-cheers"></i>
@@ -32,7 +32,7 @@ const Statistick = () => {
                             <i className="fas fa-battery-full"></i>
                         </div>
                         <h4 className="block-value">100%</h4>
-                        <p className="block-text">energii w to by ten dzień był piękny</p>
+                        <p className="block-text">energii by ten dzień był wyjątkowy</p>
                     </div>
                 </div>
             </div>

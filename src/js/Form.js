@@ -12,7 +12,7 @@ const Form = () => {
     const [emil, setEmil] = useState("");
     const [city, setCity] = useState("");
     const [phone, setPhone] = useState("");
-    const [calDate, setCalDate] = useState(new Date())
+    const [calDate, setCalDate] = useState(new Date());
     const [textarea, setTextarea] = useState("");
     const [range, setRange] = useState("");
     const [select, setSelect] = useState(" ");
@@ -22,31 +22,41 @@ const Form = () => {
         setCalDate(calDate)
     }
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        const temErrors = [];
-
-        // const emailReg = value => (value.match(/^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/)
-
+        const temErrors =[]
         if (username.typeof === "string") {
-            temErrors.push("Imie nie może zawierać liczb");
+            temErrors.push( " Imie nie moze byc liczba");
+        }
+        if (username.length < 2) {
+            temErrors.push( "Imie jest za któtkie");
+        }
+        if (!/^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i.test(emil)) {
+            temErrors.push( "zły e-mail");
         }
         if (phone.length !== 9 || phone.typeof === "number") {
             temErrors.push("Wpisany numer jest niepoprawny");
         }
         if (temErrors.length > 0) {
             setErrors(temErrors);
-            return
-        } else {
-            alert("Formularz został wysłany, postaram sie odpowiedzieć najszybciej jak to możliwe");
+            return false;
         }
-        setUsername('');
-        setTextarea('');
-        setPhone('');
+        console.log(temErrors);
+
+
     }
+
+
 
     useEffect(() => {
         renderFormToLocalStorage();
+
+        if(errors === []){
+            return (
+                alert("Formularz został wysłany, postaram sie odpowiedzieć najszybciej jak to możliwe")
+            )
+        }
     }, [])
 
     function saveFromFirebase(){
@@ -112,18 +122,18 @@ const Form = () => {
         setPhone('');
 }
 
+
     return (
         <div className="container_form" style={{backgroundImage: `url(${foto})`}}>
             <div className="first_container_form">
                 <h1 className="form-name">SKONTAKTUJ SIĘ ZE MNĄ!</h1>
                 <form>
+                    {errors.map((error) =><div key={error} className="alert alert-danger">{error}</div>)}
                     <div className="form-group" onSubmit={handleSubmit}>
                         <div className="col">
                             <div className="col1">
 
                                 <div className="row">
-                                    {errors.map((error) => <div key={error}
-                                                                className="alert alert-danger">{error}</div>)}
                                     <label htmlFor="validationServer01">Imię</label>
                                     <input type="text" className="form-control" id="validationServer01"
                                            value={username} required
@@ -147,7 +157,7 @@ const Form = () => {
                                 <div className="row">
                                     <label htmlFor="validationServer03">Numer telefonu</label>
                                     <input type="text" className="form-control" id="validationServer03"
-                                           value={phone} required
+                                           value={phone} required=""
                                            onChange={(e) => {
                                                saveFormToLocalStorage();
                                                setPhone(e.target.value)
@@ -222,8 +232,9 @@ const Form = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className="btn btn-primary btn_form" type="submit" onClick={saveFromFirebase}>Wyślij</button>
+                        <button className="btn btn-primary btn_form" type="submit">Wyślij</button>
                     </div>
+                    {errors.map((error)=><div key= {error} className="alert alert-danger">{error}</div> )}
                 </form>
             </div>
         </div>

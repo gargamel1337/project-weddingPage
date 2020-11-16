@@ -11,7 +11,7 @@
 }
 .block{
   flex-direction: column;
-  width: 176px;
+ // width: 176px;
   margin: 0 92px;
 }
 .empty-calendar{
@@ -67,4 +67,32 @@
   line-height: 1.3em;
   margin-top: 19px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1200px){
+.block{
+  margin: 0 auto ;
+  width: 33%;
+}
+  .block-text{
+    flex-wrap: wrap;
+  }
+  .block_eye{
+    margin-bottom:20px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .section{
+    padding-top: 15px ;
+  }
+  .section-block{
+    display: block;
+    margin-bottom: 10px;
+  }
+  .block-select{
+    margin-top: 25px;
+  }
+  .block-text{
+    margin: 0;
+  }
 }

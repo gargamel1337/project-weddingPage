@@ -70,3 +70,21 @@
     margin-right: 15px;
   }
 }
+
+@media only screen and (max-width: 1200px){
+  .container_collaboration{
+    padding: 20px;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  .nav_collaboration{
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .container_collaboration{
+    width: 95%;
+  }
+
+}

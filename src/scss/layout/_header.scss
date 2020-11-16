@@ -20,36 +20,31 @@
   background: none;
   color: white;
 
-
   .fa-bars {
     display: none;
-
-  }
-  @media only screen and (max-width: 1200px){
-    h2{
-      display: none;
-    }
-    h1.logo {
-      margin-top: 18px;
-    }
   }
 
-  @media only screen and (max-width: 800px) {
-    h2{
+  @media only screen and (max-width: 800px){
+    .menu-li {
       display: none;
-    }
-    h1.logo {
-      margin-top: 18px;
     }
     .fa-bars{
       display: flex;
       justify-content: end;
       font-size: 1.3em;
       margin-top: 18px;
-
     }
-    .menu-li {
-      display: none;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    padding: 0 20px;
+
+    h1.logo {
+      margin-top: 18px;
+    }
+    .fa-aviato{
+      margin : -20px 0 0 0 ;
+      padding: 0;
     }
   }
 
@@ -60,7 +55,6 @@
 
     a {
       text-decoration: none;
-     // color: $color-black;
       color: white;
       margin-left: 20px;
 
@@ -70,9 +64,9 @@
     }
   }
 }
+
 .logo-link{
   text-decoration: none;
- // color: $color-black;
   color: white;
 
 }

@@ -63,3 +63,21 @@
   margin: 40px auto;
   background: $color-bisque;
 }
+
+@media only screen and (max-width: 1200px){
+  .container_offer{
+    padding: 20px;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  .nav_offer{
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .container_offer{
+    width: 95%;
+  }
+
+}
