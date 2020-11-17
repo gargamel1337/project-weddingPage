@@ -3,22 +3,11 @@ import { NavLink } from "react-router-dom";
 import { useLocation, Switch } from 'react-router-dom'
 
 
+
+
 const Header = () => {
 
-    // function HeaderView() {
-    //     const location = useLocation();
-    //     const style = {
-    //         position: "absolute",
-    //         background: "none",
-    //         color: "width"
-    //     }
-    //     if (location === '/administartionpanel') {
-    //         return(
-    //             <li className="menu-li">Zapytania</li>
-    //         )
-    //     }
-    // }
-    // HeaderView();
+    const [open, setOpen] = ("false");
 
     const activeStyle = {
         color: "#cb997e",
@@ -27,8 +16,10 @@ const Header = () => {
         padding: "10px 15px",
     }
 
+    const [sidebar, setSidebar] = useState("false");
+    const showSidebar =() => setSidebar(!sidebar);
+//  <ul className="menu" {sidebar ? 'menu active' : 'menu'}>
 
-// <h2 className="logo">Marlena Komońska</h2>
     return (
         <header >
             <div className="container main_menu">
@@ -38,21 +29,27 @@ const Header = () => {
                             <NavLink to="/" activeClassName="logo-link"><i className="fab fa-aviato"></i></NavLink>
                         </h1>
                     </div>
-                    <ul className="menu">
-                        <li className="menu-li">
-                            <NavLink to="/omnie" activeClassName="menu_inner main_said" activeStyle={activeStyle}>O mnie</NavLink>
-                        </li>
-                        <li className="menu-li">
-                            <NavLink to="/oferta" activeClassName="menu_inner" activeStyle={activeStyle}>Oferta</NavLink>
-                        </li>
-                        <li className="menu-li">
-                            <NavLink to="/zasadywspolpracy" activeClassName="menu_inner" activeStyle={activeStyle}>Zasady współpracy</NavLink>
-                        </li>
-                        <li className="menu-li">
-                            <NavLink to="/kontakt" activeClassName="menu_inner" activeStyle={activeStyle}>Kontakt</NavLink>
-                        </li>
-                    </ul>
-                    <i className="fas fa-bars"></i>
+                    <nav >
+                        <ul className="menu" >
+                            <li className="menu-li">
+                                <NavLink to="/omnie" activeClassName="menu_inner main_said" activeStyle={activeStyle}>O
+                                    mnie</NavLink>
+                            </li>
+                            <li className="menu-li">
+                                <NavLink to="/oferta" activeClassName="menu_inner"
+                                         activeStyle={activeStyle}>Oferta</NavLink>
+                            </li>
+                            <li className="menu-li">
+                                <NavLink to="/zasadywspolpracy" activeClassName="menu_inner" activeStyle={activeStyle}>Zasady
+                                    współpracy</NavLink>
+                            </li>
+                            <li className="menu-li">
+                                <NavLink to="/kontakt" activeClassName="menu_inner"
+                                         activeStyle={activeStyle}>Kontakt</NavLink>
+                            </li>
+                        </ul>
+                    </nav>
+                    <i onClick={showSidebar} className="fas fa-bars"></i>
                 </div>
             </div>
         </header>
@@ -60,3 +57,4 @@ const Header = () => {
 };
 
 export default Header;
+

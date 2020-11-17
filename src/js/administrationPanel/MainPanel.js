@@ -8,6 +8,7 @@ const MainPanel = () => {
 
     const [form, setForm] = useState([]);
 
+
     useEffect(() => {
         db.collection("form")
             .get()
@@ -33,6 +34,7 @@ const MainPanel = () => {
                     </div>
                     <table class="table_form">
                         <tr class="list-form">
+                            <th></th>
                             <th>Imie</th>
                             <th>adres email</th>
                             <th>Numer telefonu</th>
@@ -44,6 +46,7 @@ const MainPanel = () => {
                         </tr>
                         {form.map((column) => (
                             <tr class="next_list_form">
+                                <td><i className="fas fa-circle"></i></td>
                                 <td>{column.username}</td>
                                 <td>{column.email}</td>
                                 <td>{column.phone}</td>

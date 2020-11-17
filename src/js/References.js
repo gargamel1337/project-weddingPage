@@ -3,7 +3,7 @@ import picter from "../images/profilowe-min.jpg";
 import foto from "../images/zdjecie7-mini-min.jpeg";
 
 
-function Opinion1 () {
+function opinion1 () {
     const imgStyle = {
         width:100+"%",
         height: "auto"
@@ -29,7 +29,7 @@ function Opinion1 () {
         </div>
 )
 }
-function Opinion2 () {
+function opinion2 () {
     const imgStyle = {
         width:100+"%",
         height: "auto"
@@ -55,7 +55,7 @@ function Opinion2 () {
         </div>
     )
 }
-function Opinion3 () {
+function opinion3 () {
     const imgStyle = {
         width:100+"%",
         height: "auto"
@@ -84,7 +84,7 @@ function Opinion3 () {
 
 const References = () => {
 
-    const opinion = [<Opinion1/>,<Opinion2/>,<Opinion3/>]
+    const opinion = [<opinion1/>,<opinion2/>,<opinion3/>]
     const [x, setX] = useState(0);
 
     const goLeft = () =>{
