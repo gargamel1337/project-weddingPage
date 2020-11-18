@@ -21,7 +21,7 @@ const Header = () => {
     return (
         <header>
             <div className="container main_menu">
-                <div className={isMenuOpened ? "activmenu" : "burger"}>
+                <div className={isMenuOpened ? "burger" : "activmenu"}>
                     <div className="container_menu">
                         <div className="container_logo">
                             <h1 className="logo">
