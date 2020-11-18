@@ -1,9 +1,17 @@
-.contact-footer {
-  font-size: 1.3rem;
+.contact-footer{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  background-color: $color-antique;
+  justify-content: center;
+}
+.container_footer {
+  font-family: $font-main;
+  margin: auto;
+  padding-top: 5px;
 
   .footer {
-    width: 100%;
-    background-color: $color-antique;
+    //width: 100%;
     text-align: center;
     margin: 0 auto;
     padding: 5px;
@@ -11,17 +19,26 @@
     a{
       text-decoration: none;
       color: #222222;
+      font-size: 1rem;
     }
 
     .footer2 {
       padding-bottom: 15px;
-      font-size: 1rem;
     }
   }
 }
 
+.fa-angle-double-up{
+  font-size: 2rem;
+  text-align: end;
+  color: white;
+  margin: auto 0;
+  padding-right: 20px;
+}
+
 .contact {
   background-color: $color-bisque;
+  font-family: $font-main;
   width: 100%;
   height: auto;
   display: flex;
@@ -34,7 +51,8 @@
   }
 
   .contact-text {
-    line-height: 1em;
+    line-height: 0.8em;
+    padding-top: 5px;
     text-decoration: none;
   }
 }
@@ -66,6 +84,7 @@
 
   }
 }
+
 
 @media only screen and (max-width: 800px){
   .contact{

@@ -1,7 +1,16 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import Header from "./Header";
 
 const Footer = () => {
+
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
     return (
         <footer>
             <div className="container">
@@ -18,14 +27,18 @@ const Footer = () => {
                     </div>
 
                     <div className="contact-three">
-                        <a href="https://www.facebook.com/marlena.komonska"><i className="fab fa-facebook-square"/></a>
-                        <a href="https://www.facebook.com/marlena.komonska"><i className="fab fa-instagram"/></a>
+                        <a href="https://www.facebook.com/marlena.komonska" target="_blank"><i className="fab fa-facebook-square"/></a>
+                        <a href="https://www.instagram.com/marlena_komonska_weddings" target="_blank"><i className="fab fa-instagram"/></a>
                     </div>
                 </div>
                 <div className="contact-footer">
-                    <p className="footer">WeddingTime Marlena Komońska</p>
-                    <p className="footer footer2">
-                        <NavLink to="/registrationpanel" activeClassName="registration-link">panel administracyjny</NavLink></p>
+                    <div className="container_footer">
+                        <p className="footer">WeddingTime Marlena Komońska</p>
+                        <p className="footer footer2">
+                            <NavLink to="/registrationpanel" activeClassName="registration-link">panel administracyjny
+                            </NavLink></p>
+                    </div>
+                    <i onClick={() => scrollToTop()} className="fas fa-angle-double-up"></i>
                 </div>
             </div>
         </footer>

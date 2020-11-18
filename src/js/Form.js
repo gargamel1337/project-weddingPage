@@ -42,7 +42,7 @@ const Form = () => {
         }
         if (!setErrors([])){
             saveFromFirebase()
-            alert("Formularz został wysłany, postaram sie odpowiedzieć najszybciej jak to możliwe")
+            alert("Formularz został wysłany, postaram sie odpowiedzieć najszybciej jak to możliwe.")
         }
     }
 
@@ -67,7 +67,7 @@ const Form = () => {
             .catch((error) => {
                 console.error("Error adding document: ", error);
             });
-        delateFromToLocalStorage(); //to chyba powinno byc w formularzu pamietać by to przenieść
+        delateFromToLocalStorage();
     }
     function saveFormToLocalStorage() {
         const form = {

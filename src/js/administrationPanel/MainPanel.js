@@ -52,7 +52,7 @@ const MainPanel = () => {
                                 <td>{column.phone}</td>
                                 <td>{column.city}</td>
                                 <td>{column.range}</td>
-                                <td>{column.data}</td>
+                                <td>{(column.data).substr(0,10)}</td>
                                 <td>{column.select}</td>
                                 <td>{column.text}</td>
                             </tr>
