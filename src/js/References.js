@@ -84,7 +84,7 @@ function opinion3 () {
 
 const References = () => {
 
-    const opinion = [<opinion1/>,<opinion2/>,<opinion3/>]
+    const opinion = [opinion1(),opinion2(),opinion3()]
     const [x, setX] = useState(0);
 
     const goLeft = () =>{
