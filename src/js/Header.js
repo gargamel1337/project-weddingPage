@@ -1,13 +1,14 @@
 import React, {useState,useEffect} from 'react';
 import { NavLink } from "react-router-dom";
-import { useLocation, Switch } from 'react-router-dom'
+
 
 
 
 
 const Header = () => {
 
-    const [open, setOpen] = ("false");
+    const [isMenuOpened, setIsMenuOpened] = useState(false);
+
 
     const activeStyle = {
         color: "#cb997e",
@@ -16,40 +17,43 @@ const Header = () => {
         padding: "10px 15px",
     }
 
-    const [sidebar, setSidebar] = useState("false");
-    const showSidebar =() => setSidebar(!sidebar);
-//  <ul className="menu" {sidebar ? 'menu active' : 'menu'}>
 
     return (
-        <header >
+        <header>
             <div className="container main_menu">
-                <div className="container_menu" >
-                    <div className="container_logo">
-                        <h1 className="logo">
-                            <NavLink to="/" activeClassName="logo-link"><i className="fab fa-aviato"></i></NavLink>
-                        </h1>
+                <div className={isMenuOpened ? "activmenu" : "burger"}>
+                    <div className="container_menu">
+                        <div className="container_logo">
+                            <h1 className="logo">
+                                <NavLink to="/" activeClassName="logo-link"><i className="fab fa-aviato"></i></NavLink>
+                            </h1>
+                            <i onClick={() => setIsMenuOpened((prevState) => !prevState)} className="fas fa-bars"></i>
+                            <i onClick={() => setIsMenuOpened((prevState) => !prevState)} className="fas fa-times"></i>
+
+                        </div>
+                        <nav className="menu">
+                            <ul className="menu-list">
+                                <li className="menu-li">
+                                    <NavLink to="/omnie" activeClassName="menu_inner main_said"
+                                             activeStyle={activeStyle}>O
+                                        mnie</NavLink>
+                                </li>
+                                <li className="menu-li">
+                                    <NavLink to="/oferta" activeClassName="menu_inner"
+                                             activeStyle={activeStyle}>Oferta</NavLink>
+                                </li>
+                                <li className="menu-li">
+                                    <NavLink to="/zasadywspolpracy" activeClassName="menu_inner"
+                                             activeStyle={activeStyle}>Zasady
+                                        współpracy</NavLink>
+                                </li>
+                                <li className="menu-li">
+                                    <NavLink to="/kontakt" activeClassName="menu_inner"
+                                             activeStyle={activeStyle}>Kontakt</NavLink>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <nav >
-                        <ul className="menu" >
-                            <li className="menu-li">
-                                <NavLink to="/omnie" activeClassName="menu_inner main_said" activeStyle={activeStyle}>O
-                                    mnie</NavLink>
-                            </li>
-                            <li className="menu-li">
-                                <NavLink to="/oferta" activeClassName="menu_inner"
-                                         activeStyle={activeStyle}>Oferta</NavLink>
-                            </li>
-                            <li className="menu-li">
-                                <NavLink to="/zasadywspolpracy" activeClassName="menu_inner" activeStyle={activeStyle}>Zasady
-                                    współpracy</NavLink>
-                            </li>
-                            <li className="menu-li">
-                                <NavLink to="/kontakt" activeClassName="menu_inner"
-                                         activeStyle={activeStyle}>Kontakt</NavLink>
-                            </li>
-                        </ul>
-                    </nav>
-                    <i onClick={showSidebar} className="fas fa-bars"></i>
                 </div>
             </div>
         </header>
@@ -57,4 +61,3 @@ const Header = () => {
 };
 
 export default Header;
-

@@ -107,3 +107,13 @@ div.react-calendar{
     width: 98%;
   }
 }
+
+//div with errors
+.alert-danger{
+  background-color: indianred;
+  border: 2px solid red;
+  font-size: 20px;
+  padding: 10px;
+  width: 500px;
+  margin: 0 auto;
+}

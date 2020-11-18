@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import foto from "../images/zdjecie4-min.jpeg";
-// import validator from 'validator';
-// import PropTypes from "prop-types";
 import { db } from "../firebase.js";
 
 
@@ -25,38 +23,31 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const temErrors =[]
+        const temErrors = []
         if (username.typeof === "string") {
-            temErrors.push( " Imie nie moze byc liczba");
+            temErrors.push(" Imie nie moze byc liczba");
         }
         if (username.length < 2) {
-            temErrors.push( "Imie jest za któtkie");
+            temErrors.push("Imie jest za któtkie");
         }
         if (!/^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i.test(emil)) {
-            temErrors.push( "zły e-mail");
+            temErrors.push("Wpisany e-mail jest błędny");
         }
         if (phone.length !== 9 || phone.typeof === "number") {
-            temErrors.push("Wpisany numer jest niepoprawny");
+            temErrors.push("Wpisany numer jest za krótki lub nie jest cyfrą");
         }
         if (temErrors.length > 0) {
             setErrors(temErrors);
             return false;
         }
-        console.log(temErrors);
-
-
+        if (!setErrors([])){
+            saveFromFirebase()
+            alert("Formularz został wysłany, postaram sie odpowiedzieć najszybciej jak to możliwe")
+        }
     }
-
-
 
     useEffect(() => {
         renderFormToLocalStorage();
-
-        if(errors === []){
-            return (
-                alert("Formularz został wysłany, postaram sie odpowiedzieć najszybciej jak to możliwe")
-            )
-        }
     }, [])
 
     function saveFromFirebase(){
@@ -127,9 +118,9 @@ const Form = () => {
         <div className="container_form" style={{backgroundImage: `url(${foto})`}}>
             <div className="first_container_form">
                 <h1 className="form-name">SKONTAKTUJ SIĘ ZE MNĄ!</h1>
-                <form>
+                <form onSubmit={handleSubmit}>
                     {errors.map((error) =><div key={error} className="alert alert-danger">{error}</div>)}
-                    <div className="form-group" onSubmit={handleSubmit}>
+                    <div className="form-group" >
                         <div className="col">
                             <div className="col1">
 
@@ -234,20 +225,10 @@ const Form = () => {
                         </div>
                         <button className="btn btn-primary btn_form" type="submit">Wyślij</button>
                     </div>
-                    {errors.map((error)=><div key= {error} className="alert alert-danger">{error}</div> )}
                 </form>
             </div>
         </div>
     );
 }
-
-
-// Form.propTypes={
-//     username:PropTypes.string,
-//     city: PropTypes.string,
-//     phone: PropTypes.number,
-//     text: PropTypes.string
-// }
-
 
 export default Form;
