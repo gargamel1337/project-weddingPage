@@ -21,7 +21,7 @@ const Footer = () => {
                         <p className="contact-text"> +48 608 307 050</p>
                     </div>
                     <div className="contact-two">
-                        <a href="#"><i className="fas fa-envelope-open-text"/></a>
+                        <a href="mailto:marlena.komonska@wp.pl"><i className="fas fa-envelope-open-text"/></a>
                         <h2 className="contact-header">Napisz</h2>
                         <p className="contact-text">marlena.komonska@wp.pl</p>
                     </div>
