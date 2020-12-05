@@ -1,6 +1,6 @@
 import React from 'react';
-import picter from "../images/zdjecie11.jpeg"
-import foto from "../images/zdjecie5-min.jpeg";
+import picter from "../images/zdjecie11.jpg"
+import foto from "../images/zdjecie5-min.jpg";
 import {NavLink} from "react-router-dom";
 import profilowe from "../images/profilowe-min.jpg";
 

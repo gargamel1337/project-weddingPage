@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from "react";
 import { db } from "../../../src/firebase.js";
-import foto1 from "../../images/zdjecie4-min.jpeg";
+import foto1 from "../../images/zdjecie4-min.jpg";
 
 const MainPanel = () => {
 

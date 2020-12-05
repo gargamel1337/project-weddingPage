@@ -1,5 +1,5 @@
 import React from 'react';
-import foto from "../images/zdjecie8-min.jpeg";
+import foto from "../images/zdjecie8-min.jpg";
 
 const CollaborrationSection = () => {
 

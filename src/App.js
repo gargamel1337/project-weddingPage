@@ -31,7 +31,6 @@ function App() {
                           <Statistick/>
                           <Oferts/>
                           <Collaboration/>
-                          <Picters/>
                           <References/>
                       </>
                   </Route>

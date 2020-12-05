@@ -1,6 +1,6 @@
 import React from 'react';
 import foto from "../images/Cert_ISO_2019.png";
-import foto1 from "../images/slider3-min.jpeg";
+import foto1 from "../images/slider3-min.jpg";
 
 const AboutMeSections = () => {
 

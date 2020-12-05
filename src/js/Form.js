@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import foto from "../images/zdjecie4-min.jpeg";
+import foto from "../images/zdjecie4-min.jpg";
 import { db } from "../firebase.js";
 
 

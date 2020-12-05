@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import profilowe from "../images/profilowe-min.jpg";
-import foto from "../images/zdjecie2-min.jpeg";
+import foto from "../images/zdjecie2-min.jpg";
 
 const AboutMe = () => {
     return (

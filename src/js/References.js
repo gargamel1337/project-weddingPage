@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import picter from "../images/profilowe-min.jpg";
-import foto from "../images/zdjecie7-mini-min.jpeg";
+import foto from "../images/zdjecie7-mini-min.jpg";
 
 
 function opinion1 () {
